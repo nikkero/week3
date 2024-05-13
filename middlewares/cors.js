@@ -1,17 +1,20 @@
 function cors(req, res, next) {
     const { origin } = req.headers;
-
-    if (allowedCors.includes(origin)) {
+    if (allowedCorsOrigin.includes(origin)) {
         res.header("Access-Control-Allow-Origin", origin);
+        res.header(
+            "Access-Control-Allow-Headers",
+            "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+        );
+        res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
     }
 
     next();
 }
-const allowedCors = [
+const allowedCorsOrigin = [
     "https://practicum.yandex.ru",
     "https://students-projects.ru",
     "http://localhost:3000",
-    "http://localhost:3001",
 ];
 
-module.exports = { cors }
+module.exports = { cors };

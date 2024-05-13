@@ -91,6 +91,7 @@ const checkIfCategoriesAvaliable = async (req, res, next) => {
         return;
     }
     if (!req.body.categories || req.body.categories.length === 0) {
+        console.log("here");
         res.setHeader("Content-Type", "application/json");
         res.status(400).send(
             JSON.stringify({ message: "Выбери хотя бы одну категорию" })
