@@ -3,6 +3,7 @@ const allowedCors = [
     "https://pindieapi.nomoredomainswork.ru",
     "http://localhost:3000",
     "http://localhost:3001",
+    "https://158.160.171.248",
 ];
 
 function cors(req, res, next) {
@@ -22,5 +23,5 @@ function cors(req, res, next) {
     next();
 }
 
-module.exports = cors; 
+module.exports = { cors }; 
 

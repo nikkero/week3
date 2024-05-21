@@ -1,5 +1,5 @@
 const express = require("express");
-const cors = require("./middlewares/cors")
+const { cors } = require("./middlewares/cors")
 const bodyParser = require("body-parser");
 const path = require("path");
 const pagesRouter = require("./routes/pages");
