@@ -1,9 +1,5 @@
 const allowedCors = [
     "https://pindiegg.nomoredomainswork.ru",
-    "https://pindieapi.nomoredomainswork.ru",
-    "http://localhost:3000",
-    "http://localhost:3001",
-    "https://158.160.171.248",
 ];
 
 function cors(req, res, next) {
